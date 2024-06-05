@@ -16,10 +16,7 @@ source \
 _global_variables() {
   target_command=""
   target_host=""
-  target_network=""
-  target_device=""
-  target_gateway=""
-  target_address=""
+  connection_bandwidth=""
   color=""
   quiet=""
 }
