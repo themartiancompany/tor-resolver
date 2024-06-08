@@ -54,8 +54,11 @@ _tor_resolver() {
 
 _set_addresses() {
   local \
+    _host="${1}"
     _conf="" \
     _addresses=()
+  shift \
+    1
   _addresses=(
     "$@"
   )
@@ -81,6 +84,7 @@ _get_addresses() {
     _no_cfg_msg=() \
     _available \
     _conf \
+    _index \
     _result
   _shuf_opts=(
     -n
@@ -110,7 +114,9 @@ _get_addresses() {
       echo \
         "${onion_addresses[@]}")
   )
-  _available="${#_addresses}"
+  _available="${#_addresses[@]}"
+  _msg_info \
+    "found ${_available} addresses"
   if [[ "${_available}" == "0" ]]; then
     _msg_error \
       "No addresses configured for ${_host}" \
@@ -126,8 +132,11 @@ _get_addresses() {
   )
   for _result \
     in "${_selection[@]}"; do
+    _index="$(( _result - 1))"
+    _msg_info \
+      "selected ${_result}"
     _results+=(
-      "${_addresses[${_result}]}"
+      "${_addresses[_index]}"
     )
   done
   echo \
