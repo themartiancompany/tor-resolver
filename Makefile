@@ -2,11 +2,11 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 PREFIX ?= /usr/local
-DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/resolver
+DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/tor-resolver
 BIN_DIR=$(DESTDIR)$(PREFIX)/bin
 
 DOC_FILES=$(wildcard *.rst)
-SCRIPT_FILES=$(wildcard resolver/*)
+SCRIPT_FILES=$(wildcard tor-resolver/*)
 
 all:
 
@@ -19,7 +19,7 @@ install: install-scripts install-doc
 
 install-scripts:
 
-	install -vDm 755 resolver/resolver "$(BIN_DIR)/resolver"
+	install -vDm 755 tor-resolver/tor-resolver "$(BIN_DIR)/tor-resolver"
 
 install-doc:
 

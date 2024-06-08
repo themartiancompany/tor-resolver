@@ -1,5 +1,5 @@
 ===============
-Hotspot Resolver Authors
+Tor Resolver Authors
 ===============
 
 * Pellegrino Prevete <pellegrinoprevete@gmail.com>
