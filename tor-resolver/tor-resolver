@@ -78,7 +78,7 @@ _get_addresses() {
     _selection=() \
     _results=() \
     _shuf_opts=() \
-    _no_cfg_msg=()
+    _no_cfg_msg=() \
     _available \
     _conf \
     _result
