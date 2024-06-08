@@ -29,13 +29,13 @@ _requirements() {
 }
 
 
-resolver() {
+_resolver() {
   local \
     _command="${1}" \
     _host="${2}" \
     _bandwidth="${3}" \
-    _access="${4}"
-    _network="${5}"
+    _access="${4}" \
+    _network="${5}" \
     _resolver \
     _args=() \
     _resolver_opts=()
