@@ -279,7 +279,7 @@ _show_config() {
   _msg_info "${app_name} configuration"
   _msg_info "             Resolve date:   $(_get "_resolve" "date")"
   _msg_info "              Target host:   $(_get "target" "host")"
-  _msg_info "                  Network:   $(_get "target" "nutwork")"
+  _msg_info "                  Network:   $(_get "target" "network")"
   _msg_info "                Bandwidth:   $(_get "network" "bandwidth")"
   _msg_info "                   Access:   $(_get "network" "access")"
 }
