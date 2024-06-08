@@ -16,7 +16,7 @@ source \
 _global_variables() {
   target_command=""
   target_host=""
-  results_amount=""
+  addresses_amount=""
   onion_addresses=()
   color=""
   quiet=""
@@ -47,7 +47,7 @@ _tor_resolver() {
       "${_addresses[@]}"
     )
   fi
-  "${_command}_addresses" \
+  "_${_command}_addresses" \
     "${_host}" \
     "${_args[@]}"
 }
